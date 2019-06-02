@@ -679,12 +679,12 @@ function prepareResponse(val) {
   // respond()
   respond(spokenResponse);
   
-  var debugJSON = JSON.stringify(val, undefined, 2);
-  debugRespond(debugJSON); // Print JSON to Debug window
+  //var debugJSON = JSON.stringify(val, undefined, 2);
+  //debugRespond(debugJSON); // Print JSON to Debug window
 }
-function debugRespond(val) {
-  $("#response").text(val);
-}
+//function debugRespond(val) {
+  //$("#response").text(val);
+//}
 function respond(val) {
   if (val == "") {
     val = messageSorry;
