@@ -688,9 +688,5 @@ function showSlides1() {
 
     /***Test***/
      function play() {
-    TTS.speak('hello, world!', function () {
-    console.log('success');
-  }, function (reason) {
-    console.log('error', reason);
-  });
+       TTS.speak('Hello World');
     }
