@@ -590,7 +590,7 @@ function showSlides1() {
         }
       });*/
       $('#speech').on( "change", function(event) {
-           //event.preventDefault();
+
             send();
          });
       $recBtn.on("click", function(event) {
@@ -668,8 +668,9 @@ function showSlides1() {
       var debugJSON = JSON.stringify(val, undefined, 2),
         spokenResponse = val.result.speech;
       respond(spokenResponse);
-    
+     
     }
+   
     function respond(val) {
       if (val == "") {
         val = messageSorry;
@@ -682,4 +683,14 @@ function showSlides1() {
         window.speechSynthesis.speak(msg);
       }
       $("#spokenResponse").addClass("is-active").find(".spoken-response__text").html(val);
+    }
+
+
+    /***Test***/
+     function play() {
+      if ('speechSynthesis' in window) {
+        console.log("The API is installed");
+        var ssu = new SpeechSynthesisUtterance("hello world");
+        window.speechSynthesis.speak(ssu);
+      }
     }
