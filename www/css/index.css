@@ -215,6 +215,39 @@ table#t01 th    {
     background-color: black;
     color: white;
 }
+/*********************AI PART*********************/
+#ai-img{
+  width: 150px;
+  height: 120px;
+  text-align: center;
+  border-radius: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 5px;
+}
+#lblAi{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.spoken-response {
+  max-height: 0;
+  font-family: "Titillium Web", Arial, sans-serif;
+  overflow: hidden;
+  -webkit-transition: all 0.35s ease-in;
+}
+
+.spoken-response.is-active {
+  height: auto;
+}
+.spoken-response__text {
+  background-color: #040E23;
+  color: #7584A2;
+  padding: 1em;
+}
+/*********************END OF AI PART*********************/
 /* Landscape */
 @media (orientation: landscape) {
 
@@ -231,14 +264,7 @@ table#t01 th    {
 
     
 }
-.container-ai{
-  
-      top: 80%;
-      left: 50%;
-      height: 90%;
-     
 
-}
 
 
 }
