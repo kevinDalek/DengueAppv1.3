@@ -590,7 +590,7 @@ function showSlides1() {
         }
       });*/
       $('#speech').on( "change", function(event) {
-           event.preventDefault();
+           //event.preventDefault();
             send();
          });
       $recBtn.on("click", function(event) {
@@ -668,10 +668,7 @@ function showSlides1() {
       var debugJSON = JSON.stringify(val, undefined, 2),
         spokenResponse = val.result.speech;
       respond(spokenResponse);
-      debugRespond(debugJSON);
-    }
-    function debugRespond(val) {
-      $("#response").text(val);
+    
     }
     function respond(val) {
       if (val == "") {
