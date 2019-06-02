@@ -676,11 +676,8 @@ function showSlides1() {
         val = messageSorry;
       }
       if (val !== messageRecording) {
-        var msg = new SpeechSynthesisUtterance();
-        msg.voiceURI = "native";
-        msg.text = val;
-        msg.lang = "en-US";
-        window.speechSynthesis.speak(msg);
+     
+        TTS.speak(val);
       }
       $("#spokenResponse").addClass("is-active").find(".spoken-response__text").html(val);
     }
@@ -688,5 +685,10 @@ function showSlides1() {
 
     /***Test***/
      function play() {
-       TTS.speak('Hello World');
+   /* TTS.speak('hello, world!', function () {
+    console.log('success');
+  }, function (reason) {
+    console.log('error', reason);
+  });*/
+  TTS.speak('Hello World');
     }
