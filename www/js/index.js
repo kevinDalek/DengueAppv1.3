@@ -688,9 +688,9 @@ function showSlides1() {
 
     /***Test***/
      function play() {
-      if ('speechSynthesis' in window) {
-        console.log("The API is installed");
-        var ssu = new SpeechSynthesisUtterance("hello world");
-        window.speechSynthesis.speak(ssu);
-      }
+    TTS.speak('hello, world!', function () {
+    console.log('success');
+  }, function (reason) {
+    console.log('error', reason);
+  });
     }
