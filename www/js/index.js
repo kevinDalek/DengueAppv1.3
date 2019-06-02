@@ -583,12 +583,16 @@ function showSlides1() {
   /*******END OF API Part***********/
  $speechInput = $("#speech");
       $recBtn = $("#rec");
-      $speechInput.keypress(function(event) {
+     /* $speechInput.keypress(function(event) {
         if (event.which == 13) {
           event.preventDefault();
           send();
         }
-      });
+      });*/
+      $('#speech').on( "change", function(event) {
+           event.preventDefault();
+            send();
+         });
       $recBtn.on("click", function(event) {
         switchRecognition();
       });
